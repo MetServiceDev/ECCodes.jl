@@ -65,7 +65,7 @@ function freemessage(m::GribMessage)
 end
 
 function keys(m::GribMessage,filter_flags=0)
-    BADKEYS=["codedValues","values","bitmap"]
+    BADKEYS=["codedValues","values","bitmap","reservedNeedNotBePresent"]
     
     r=String[]
     kiter=ccall((:codes_keys_iterator_new,libeccodes),
